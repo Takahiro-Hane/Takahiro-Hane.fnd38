@@ -1,100 +1,107 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>オセロ</title>
-    <link rel="stylesheet" href="oselo.css">
-</head>
-<body>
-    <div id = "title">
-        <h1>オセロゲーム</h1>
+    <head>
+        <meta charset="UTF-8">
+        <title>リバーシ</title>
+        <link rel="stylesheet" href="oselo.css">
+    </head>
+    <body>
+        <div id = "title">
+            <h1>Reversi</h1>
+        </div>
+        <div class= "board-container">
+            <div id = "board">
+       <div class = "board-line">
+                    <button type = "button" class = "square" data1 = "0" data2 = "0"></button>
+                    <button type = "button" class = "square" data1 = "0" data2 = "1"></button>
+                    <button type = "button" class = "square" data1 = "0" data2 = "2"></button>
+                    <button type = "button" class = "square" data1 = "0" data2 = "3"></button>
+                    <button type = "button" class = "square" data1 = "0" data2 = "4"></button>
+                    <button type = "button" class = "square" data1 = "0" data2 = "5"></button>
+                    <button type = "button" class = "square" data1 = "0" data2 = "6"></button>
+                    <button type = "button" class = "square" data1 = "0" data2 = "7"></button>
+       </div>
+       <div class = "board-line">
+            <button type = "button" class = "square" data1 = "1" data2 = "0"></button>
+            <button type = "button" class = "square" data1 = "1" data2= "1"></button>
+            <button type = "button" class = "square" data1 = "1" data2 = "2"></button>
+            <button type = "button" class = "square" data1 = "1" data2 = "3"></button>
+            <button type = "button" class = "square" data1 = "1" data2 = "4"></button>
+            <button type = "button" class = "square" data1 = "1" data2 = "5"></button>
+            <button type = "button" class = "square" data1 = "1" data2 = "6"></button>
+            <button type = "button" class = "square" data1 = "1" data2  = "7"></button>
+        </div>
+        <div class = "board-line">
+            <button type = "button" class = "square" data1 = "2" data2 = "0"></button>
+            <button type = "button" class = "square" data1 = "2" data2 = "1"></button>
+            <button type = "button" class = "square" data1 = "2" data2 = "2"></button>
+            <button type = "button" class = "square" data1 = "2" data2 = "3"></button>
+            <button type = "button" class = "square" data1 = "2" data2 = "4"></button>
+            <button type = "button" class = "square" data1 = "2" data2 = "5"></button>
+            <button type = "button" class = "square" data1 = "2" data2 = "6"></button>
+            <button type = "button" class = "square" data1 = "2" data2 = "7"></button>
+        </div>
+        <div class = "board-line">
+            <button type = "button" class = "square" data1 = "3" data2 = "0"></button>
+            <button type = "button" class = "square" data1 = "3" data2 = "1"></button>
+            <button type = "button" class = "square" data1 = "3" data2 = "2"></button>
+            <button type = "button" class = "square" data1 = "3" data2 = "3" data3 = "black">●</button>
+            <button type = "button" class = "square" data1 = "3" data2 = "4" data3 = "white">●</button>
+            <button type = "button" class = "square" data1 = "3" data2 = "5"></button>
+            <button type = "button" class = "square" data1 = "3" data2 = "6"></button>
+            <button type = "button" class = "square" data1 = "3" data2 = "7"></button>
+        </div>
+        <div class = "board-line">
+            <button type = "button" class = "square" data1 = "4" data2 = "0"></button>
+            <button type = "button" class = "square" data1 = "4" data2 = "1"></button>
+            <button type = "button" class = "square" data1 = "4" data2 = "2"></button>
+            <button type = "button" class = "square" data1 = "4" data2 = "3" data3 = "white">●</button>
+            <button type = "button" class = "square" data1 = "4" data2 = "4" data3 = "black">●</button>
+            <button type = "button" class = "square" data1 = "4" data2 = "5"></button>
+            <button type = "button" class = "square" data1 = "4" data2 = "6"></button>
+            <button type = "button" class = "square" data1 = "4" data2 = "7"></button>
+        </div>
+        <div class = "board-line">
+            <button type = "button" class = "square" data1 = "5" data2 = "0"></button>
+            <button type = "button" class = "square" data1 = "5" data2 = "1"></button>
+            <button type = "button" class = "square" data1 = "5" data2 = "2"></button>
+            <button type = "button" class = "square" data1 = "5" data2 = "3"></button>
+            <button type = "button" class = "square" data1 = "5" data2 = "4"></button>
+            <button type = "button" class = "square" data1 = "5" data2 = "5"></button>
+            <button type = "button" class = "square" data1 = "5" data2 = "6"></button>
+            <button type = "button" class = "square" data1 = "5" data2 = "7"></button>
+        </div>
+        <div class = "board-line">
+            <button type = "button" class = "square" data1 = "6" data2 = "0"></button>
+            <button type = "button" class = "square" data1 = "6" data2 = "1"></button>
+            <button type = "button" class = "square" data1 = "6" data2 = "2"></button>
+            <button type = "button" class = "square" data1 = "6" data2 = "3"></button>
+            <button type = "button" class = "square" data1 = "6" data2 = "4"></button>
+            <button type = "button" class = "square" data1 = "6" data2 = "5"></button>
+            <button type = "button" class = "square" data1 = "6" data2 = "6"></button>
+            <button type = "button" class = "square" data1 = "6" data2 = "7"></button>
+        </div>
+        <div class = "board-line">
+            <button type = "button" class = "square" data1 = "7" data2 = "0"></button>
+            <button type = "button" class = "square" data1 = "7" data2 = "1"></button>
+            <button type = "button" class = "square" data1 = "7" data2 = "2"></button>
+            <button type = "button" class = "square" data1 = "7" data2 = "3"></button>
+            <button type = "button" class = "square" data1 = "7" data2 = "4"></button>
+            <button type = "button" class = "square" data1 = "7" data2 = "5"></button>
+            <button type = "button" class = "square" data1 = "7" data2 = "6"></button>
+            <button type = "button" class = "square" data1 = "7" data2 = "7"></button>
+        </div>
     </div>
-    <div id = "board">
-        <div class = "board-line">
-            <button type = "button" class = "square" date1 = "0" data2 = "0"></button>
-            <button type = "button" class = "square" date1 = "0" data2 = "1"></button>
-            <button type = "button" class = "square" date1 = "0" data2 = "2"></button>
-            <button type = "button" class = "square" date1 = "0" data2 = "3"></button>
-            <button type = "button" class = "square" date1 = "0" data2 = "4"></button>
-            <button type = "button" class = "square" date1 = "0" data2 = "5"></button>
-            <button type = "button" class = "square" date1 = "0" data2 = "6"></button>
-            <button type = "button" class = "square" date1 = "0" data2 = "7"></button>
-        </div>
-        <div class = "board-line">
-            <button type = "button" class = "square" date1 = "1" data2 = "0"></button>
-            <button type = "button" class = "square" date1 = "1" data2= "1"></button>
-            <button type = "button" class = "square" date1 = "1" data2 = "2"></button>
-            <button type = "button" class = "square" date1 = "1" data2 = "3"></button>
-            <button type = "button" class = "square" date1 = "1" data2 = "4"></button>
-            <button type = "button" class = "square" date1 = "1" data2 = "5"></button>
-            <button type = "button" class = "square" date1 = "1" data2 = "6"></button>
-            <button type = "button" class = "square" date1 = "1" data2  = "7"></button>
-        </div>
-        <div class = "board-line">
-            <button type = "button" class = "square" date1 = "2" data2 = "0"></button>
-            <button type = "button" class = "square" date1 = "2" data2 = "1"></button>
-            <button type = "button" class = "square" date1 = "2" data2 = "2"></button>
-            <button type = "button" class = "square" date1 = "2" data2 = "3"></button>
-            <button type = "button" class = "square" date1 = "2" data2 = "4"></button>
-            <button type = "button" class = "square" date1 = "2" data2 = "5"></button>
-            <button type = "button" class = "square" date1 = "2" data2 = "6"></button>
-            <button type = "button" class = "square" date1 = "2" data2 = "7"></button>
-        </div>
-        <div class = "board-line">
-            <button type = "button" class = "square" date1 = "3" data2 = "0"></button>
-            <button type = "button" class = "square" date1 = "3" data2 = "1"></button>
-            <button type = "button" class = "square" date1 = "3" data2 = "2"></button>
-            <button type = "button" class = "square" date1 = "3" data2 = "3" data3 = "black">●</button>
-            <button type = "button" class = "square" date1 = "3" data2 = "4" data3 = "white">●</button>
-            <button type = "button" class = "square" date1 = "3" data2 = "5"></button>
-            <button type = "button" class = "square" date1 = "3" data2 = "6"></button>
-            <button type = "button" class = "square" date1 = "3" data2 = "7"></button>
-        </div>
-        <div class = "board-line">
-            <button type = "button" class = "square" date1 = "4" data2 = "0"></button>
-            <button type = "button" class = "square" date1 = "4" data2 = "1"></button>
-            <button type = "button" class = "square" date1 = "4" data2 = "2"></button>
-            <button type = "button" class = "square" date1 = "4" data2 = "3" data3 = "white">●</button>
-            <button type = "button" class = "square" date1 = "4" data2 = "4" data3 = "black">●</button>
-            <button type = "button" class = "square" date1 = "4" data2 = "5"></button>
-            <button type = "button" class = "square" date1 = "4" data2 = "6"></button>
-            <button type = "button" class = "square" date1 = "4" data2 = "7"></button>
-        </div>
-        <div class = "board-line">
-            <button type = "button" class = "square" date1 = "5" data2 = "0"></button>
-            <button type = "button" class = "square" date1 = "5" data2 = "1"></button>
-            <button type = "button" class = "square" date1 = "5" data2 = "2"></button>
-            <button type = "button" class = "square" date1 = "5" data2 = "3"></button>
-            <button type = "button" class = "square" date1 = "5" data2 = "4"></button>
-            <button type = "button" class = "square" date1 = "5" data2 = "5"></button>
-            <button type = "button" class = "square" date1 = "5" data2 = "6"></button>
-            <button type = "button" class = "square" date1 = "5" data2 = "7"></button>
-        </div>
-        <div class = "board-line">
-            <button type = "button" class = "square" date1 = "6" data2 = "0"></button>
-            <button type = "button" class = "square" date1 = "6" data2 = "1"></button>
-            <button type = "button" class = "square" date1 = "6" data2 = "2"></button>
-            <button type = "button" class = "square" date1 = "6" data2 = "3"></button>
-            <button type = "button" class = "square" date1 = "6" data2 = "4"></button>
-            <button type = "button" class = "square" date1 = "6" data2 = "5"></button>
-            <button type = "button" class = "square" date1 = "6" data2 = "6"></button>
-            <button type = "button" class = "square" date1 = "6" data2 = "7"></button>
-        </div>
-        <div class = "board-line">
-            <button type = "button" class = "square" date1 = "7" data2 = "0"></button>
-            <button type = "button" class = "square" date1 = "7" data2 = "1"></button>
-            <button type = "button" class = "square" date1 = "7" data2 = "2"></button>
-            <button type = "button" class = "square" date1 = "7" data2 = "3"></button>
-            <button type = "button" class = "square" date1 = "7" data2 = "4"></button>
-            <button type = "button" class = "square" date1 = "7" data2 = "5"></button>
-            <button type = "button" class = "square" date1 = "7" data2 = "6"></button>
-            <button type = "button" class = "square" date1 = "7" data2 = "7"></button>
-        </div>
-    </div>
-    <div id = "reset">
-            
-        <button type = "button" id = "initialize"></button>
-    </div>
+    <div id="score-board">
+    <p>Black: <span id="black-count">2</span></p>
+    <p>White: <span id="white-count">2</span></p>
+</div>
+</div>
+<div id = "reset">
+    <button type = "button" id = "initialize">Reset</button>
+</div>
        <script src="oselo.js"></script>
+</body>
+</html>
 </body>
 </html>
