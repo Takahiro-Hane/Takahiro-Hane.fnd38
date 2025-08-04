@@ -1,23 +1,50 @@
 body {
-    background-image : url("sozai-252.jpg");
+    background-image : url("mokume.png");
 }
 
+.board-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap:8px;
+}
+
+#score-board {
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 120px;
+  text-align: center;
+  line-height: 1.6;
+}
 
 
 #title {
+    font-size: 30px;
+    font-family: "メイリオ";
     text-align: center;
-    color: rgb(90, 142, 187);
+    color: rgb(246, 248, 250);
+    margin-bottom: 0.5rem;
 }
+
 .board-line {
     display: flex;
 }
 
 #board {
-    width: 400px;
-    margin: 5rem auto;
+    width: 560px;
+    margin: 0;
+    margin-left: 5em;
+    margin-top: 0;
     background-color: black;
     outline: 1.5rem;
     outline-color: black;
+    border: 6px solid #3e3e3e;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
 .square:hover {
@@ -27,17 +54,23 @@ body {
 }
 
 .square {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     background-color: green;
     box-sizing: border-box;
-    font-size: 4rem;
-    line-height: normalS;
-}
+    font-size: 6rem;
+    line-height: normalS; 
+    border-radius: 4px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.4);
+    color: transparent;
+    position: relative;
+    }
+
+
 .square[data3 = "black"] {
     color: black;
 }
@@ -47,10 +80,33 @@ body {
 
 #reset {
     position: fixed;
-    bottom: 10rem;
-    right: 5rem;
+    bottom: 15rem;
+    right:  15rem;
 }
-.square.selected {
-    outline: 2px solid yellow;
-    background-color: limegreen; /* 好みで変更OK */
+#initialize {
+    padding: 10px 20px;
+    font-size: 30px;
+    font-family: monospace;
+    background-color: rgb(230, 230, 248);
+    color: rgb(94, 93, 93);
+    border: 2px solid rgb(222, 226, 230);
+    border-radius: 50px;
+    box-shadow: inset 4px 4px 4px #a8a7a7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
 }
+
+#initialize:hover {
+    background-color: #a1a0a3;
+    box-shadow: inset 2px 2px 2px #cccaca;
+}
+
+.square.highlight {
+  background-color:rgba(119, 241, 156, 0.4);
+  border: 1px dashed #ffeb3b; 
+  box-shadow: 0 0 6px  #fff176; 
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
